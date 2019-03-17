@@ -5,6 +5,7 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/User'); // initialize user model
+require('./models/Survey');
 require('./services/passport'); // initialize passport configuration
 
 
@@ -25,6 +26,7 @@ app.use(passport.session());
 // these routes are checked first if they match the request route!
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 // then in production these routes are checked!
 if (process.env.NODE_ENV === 'production') {
