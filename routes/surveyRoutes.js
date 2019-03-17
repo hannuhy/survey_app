@@ -17,6 +17,11 @@ module.exports = (app) => {
     res.send(surveys);
   });
 
+  app.delete('/api/surveys/:surveyId', requireLogin, async(req, res) => {
+    const result = await Survey.findByIdAndRemove(req.params.surveyId);
+    res.send({ msg: 'Survey delete success' });
+  });
+
   app.get('/api/surveys/:surveyId/:choice', (req, res) => {
     res.send('Thanks for voting!');
   });
