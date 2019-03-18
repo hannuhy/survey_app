@@ -1,0 +1,8 @@
+.ColumnHeader {
+  text-decoration: underline;
+}
+
+.ColumnHeader:hover {
+  cursor: pointer;
+}
+
