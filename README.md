@@ -9,6 +9,7 @@ Working application: https://mysterious-sierra-44030.herokuapp.com/.
 # How to
 
 Login using credentials from Google account. 
+
 Add test credits using card: 
   Card number: 4242 4242 4242 4242
   Expires: 10/20
